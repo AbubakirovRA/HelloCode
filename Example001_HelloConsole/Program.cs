@@ -1,2 +1,2 @@
 ﻿// Таким образом, а именно после двух слэшей, в C# пишутся комментарии
-Console.WriteLine("2 Hello, World!");
+Console.WriteLine(value: "2 Hello, World!");
