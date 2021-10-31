@@ -122,8 +122,7 @@ PrintTask(array);
 
 WaitUser();
 
-int size = SizeOfArray();
-int[] A = new int[size];
+int[] A = new int[Convert.ToInt32(SizeOfArray())];
 
 FillArray(A);
 Console.WriteLine("Элементы массива A:");
@@ -131,9 +130,7 @@ Console.WriteLine("Элементы массива A:");
 PrintArray(A);
 Console.WriteLine();
 
-int sizeB = RightOrderSize(A);
-
-int[] B = new int[Convert.ToInt32(sizeB) + 1];
+int[] B = new int[Convert.ToInt32(RightOrderSize(A)) + 1];
 
 RightOrderFill(A, B);
 
