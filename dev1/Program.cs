@@ -135,7 +135,6 @@ int[] B = new int[Convert.ToInt32(RightOrderSize(A)) + 1];
 RightOrderFill(A, B);
 
 Console.WriteLine("Элементы массива B:");
-Console.WriteLine();
 
 PrintArray(B);
 Console.WriteLine();
