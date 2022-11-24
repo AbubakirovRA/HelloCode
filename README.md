@@ -12,3 +12,5 @@
 git filter-branch --force --index-filter "git rm --cached --ignore-unmatch Относительный_путь_в_корне_репозитория/bigfile.exe" -- --all
 
 взял отсюда: https://translated.turbopages.org/proxy_u/en-ru.ru.71ed2b1c-637fbc7e-8db5205e-74722d776562/https/stackoverflow.com/questions/8740187/git-how-to-remove-file-from-historical-commit
+
+Нужные команды к выше указанной: git log  ---> git show --stat номер_выбранного_коммита
