@@ -13,6 +13,12 @@ git pull origin main --allow-unrelated-histories
 
 git filter-branch --force --index-filter "git rm --cached --ignore-unmatch Относительный_путь_в_корне_репозитория_к_файлу_который_был_запушен_ошибочно" -- --all
 
+Например:
+git filter-branch --index-filter "git rm --cached --ignore-unmatch testrail-7.5.3.1000-ion72.zip" --tag-name-filter cat -- --all
+
+
 взял отсюда: https://stackoverflow.com/questions/8740187/git-how-to-remove-file-from-historical-commit
 
 Нужные команды к выше указанной: git log  ---> git show --stat номер_выбранного_коммита
+
+
