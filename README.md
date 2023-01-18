@@ -41,26 +41,26 @@ git filter-branch --index-filter "git rm --cached --ignore-unmatch testrail-7.5.
 
 $ git remote add origin git@github.com:имя-вашей-учётной-записи/имя-хранилища
 $ git fetch --all
+
 если вдруг текущей у вас объявлена не ветка master, то сделайте её таковой:
-
 $ git checkout master
+
 добавьте в эту ветку коммит, созданный сервером в ветке main (содержащий создание автосгенерированного файла .gitignore):
-
 $ git cherry-pick origin/main
+
 создайте локальную ветку main, которая будет указывать (ветка в git — это ведь просто плавающий указатель, верно?) на тот же коммит, что и master:
-
 $ git branch -f main master
+
 теперь сделайте ветку main текущей:
-
 $ git checkout main
+
 удалите ветку master:
-
 $ git branch -D master
+
 и отправьте ветку main на сервер, делая одновременно и перезапись (опция -f) привязку локальной ветки к ветке на сервере (опция -u):
-
 $ git push -f -u origin main
-на этом всё. доп. чтение:
 
+на этом всё. доп. чтение:
 $ man git-remote
 $ man git-fetch
 $ man git-checkout
